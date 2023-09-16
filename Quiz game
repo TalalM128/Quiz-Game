@@ -1,0 +1,182 @@
+#Quiz Game By Talal Malhi
+#Welcome
+print("Welcome to the Python Quiz Game By Talal Malhi! ")
+print('\n')
+
+print("In this quiz game, I will test your knowledge on the aspects of Python.")
+print('\n')
+
+#Ask the user if they are sure
+start = input("Would you like to pratice before we start? Yes or No: ")
+print('\n') 
+if start == "No" or start == "no":
+    print("Okay! This quiz consist of 7 questions that will get more challenging over the period of time! ")
+    print()
+    print("Each question that you get correct is +1 point, but each question you get wrong will be -1 point and will end the game.")
+    print()
+    print("Goodluck!")
+    print()
+elif start == "Yes" or start ==  "yes":
+    print("Okay, make sure to practice hard, and come again when your ready! ")
+    exit()
+print('\n') 
+
+#User name
+name = input("Before we start, what is your name fellow contestant? ")
+print()
+print("I see {}, let us begin".format(name))
+score = 0
+value_score = "9"
+scores = 9
+print()
+
+#Question 1
+question1 = input("Which of the following is incorrect?: \na.Print(apple) \nb.happy.pop(1) \nc.print(card[5:]) \nQ1.=")
+if question1 == "a" or question1 == "A":
+    print("You are correct!")
+    score += 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+else:
+    print()
+    print("Incorrect, you lose")
+    print()
+    print("The Answer Is: a.Print(apple)")
+    print()
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+#Question 2
+question2 = input("Which of the following is incorrect?: \na.print(game) \nb.print(card[-1]) \nc.For student in students: \n    print(students) \nQ2.=")
+if question2 == "c" or question2 == "C":
+    print("You are correct!")
+    score += 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+else:
+    print("The Answer Is: c.For student in students: \n    print(students)")
+    print()
+    print("Incorrect, -1, and now you lose")
+    print()
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+#Question 3
+question3 = input("When using the shuffle function, do you need the random module?: \na.True \nb.False\nQ3= ")
+if question3 == "True" or question3 == "true" or question3 == "A" or question3 == "a":
+    print("You are correct!")
+    score += 1
+else:
+    print("The Answer Is: a.True. You need the random module (import random)")
+    print()
+    print("Incorrect, you lose")
+    print()
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+#Question 4
+question4 = input(".pop is a function that can use both a string and int(number) to remove something in a list?: \na.True \nb.False\nQ4= ")
+if question4 == "False" or question4 == "false" or question4 == "B" or question4 == "b":
+    print("You are correct!")
+    score += 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+else:
+    print("The Answer Is: b.False, the .pop function only uses a int(number) not a string (apple.pop(0)). The function that uses a string is reffered to as the .remove function")
+    print()
+    print("Incorrect, you lose")
+    print()
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+#Question 5
+question5 = input("Q5: The function {}, allows the user to get the length of a list without counting: ")
+if question5 == "len()" or question5 == "len":
+    print("You are correct!")
+    print()
+    print("The function len(), allows the user to get the length of a list without counting")
+    score += 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+else:
+    print("The function len(), allows the user to get the length of a list without counting")
+    print()
+    print("Incorrect, you lose")
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print()
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+#Question 6
+question6 = input("Q6: The function {}, is used to get rid of all the capitalization and lowers all letters in a string: ")
+if question6 == "lower()" or question6 == "lower":
+    print("You are correct!")
+    print()
+    print("The function lower(), is used to get rid of all the capitalization and lowers all letters in a string")
+    score += 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+else:
+    print("The function lower(), is used to get rid of all the capitalization and lowers all letters in a string")
+    print()
+    print("Incorrect, you lose")
+    score -= 1
+    print("You got " + str(score) + "/"  + value_score + " correct")
+    print()
+    print("Your final score is {}".format(score))
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    exit()
+print()
+
+print("{}, get ready! This one is for 3 points!".format(name))
+print()
+
+#Question 7
+question7 = input("Q7: {}, was where python got its name from: ")
+if question7 == "Monty Python's Flying Circus" or question7 == "Monty Python's" or question7 == "monty python's" or question7 == "monty python" or question7 == "MP" or question7 == "mp":
+    print("You are correct!")
+    print()
+    print("Monty Python's Flying Circus, was where python got its name")
+    print()
+    score += 3
+    print("Congrats, you made it! your final score is" + str(score) + "/"  + value_score)
+    print()
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+    print()
+    print("{}. You deserve a treat, go treat yourself".format(name))
+else:
+    print("Monty Python's Flying Circus, was where python got its name")
+    print()
+    print("Incorrect, but you made it till the end!")
+    score -= 1
+    print()
+    print("Congrats! your final score is" + str(score) + "/"  + value_score)
+    print()
+    print("Thank you all for playing my python quiz, hope you found this to be interesting and helpful, it took alot of time but it was worth it.")
+    print("Your percentage: ")
+    print((score / scores ) * 100)
+print()
+
+#Thank all of Talal's players (Finally done)
+print("Thank you all for playing my python quiz, hope you found this to be interesting and helpful, it took alot of time but it was worth it :) ")
